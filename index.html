@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Chen - IT Professional Portfolio</title>
+    <title>varshini chandrashekar - IT Professional Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; }
         .gradient-bg { 
-            background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #533483);
+            background: linear-gradient(-45deg, #1e40af, #3b82f6, #06b6d4, #0ea5e9);
             background-size: 400% 400%;
             animation: gradientShift 15s ease infinite;
         }
         .dark-animated-bg {
-            background: linear-gradient(-45deg, #0f172a, #1e293b, #334155, #475569);
+            background: linear-gradient(-45deg, #1e293b, #334155, #475569, #64748b);
             background-size: 400% 400%;
             animation: gradientShift 20s ease infinite;
         }
         .dark-card-bg {
-            background: linear-gradient(135deg, #1e293b, #334155);
-            border: 1px solid rgba(148, 163, 184, 0.1);
+            background: linear-gradient(135deg, #334155, #475569);
+            border: 1px solid rgba(148, 163, 184, 0.3);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
         @keyframes gradientShift {
             0% { background-position: 0% 50%; }
@@ -100,18 +101,19 @@
 </head>
 <body class="dark-animated-bg text-white">
     <!-- Navigation -->
-    <nav class="bg-gray-900/90 backdrop-blur-sm shadow-lg fixed w-full top-0 z-50 border-b border-gray-700">
+    <nav class="bg-slate-700/90 backdrop-blur-sm shadow-lg fixed w-full top-0 z-50 border-b border-cyan-400/50">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex justify-between items-center py-4">
-                <div class="text-2xl font-bold text-white">Alex Chen</div>
+                <div class="text-2xl font-bold text-white">Varshini chandrashekar</div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-300 hover:text-blue-400 transition duration-300">Home</a>
-                    <a href="#about" class="text-gray-300 hover:text-blue-400 transition duration-300">About</a>
-                    <a href="#skills" class="text-gray-300 hover:text-blue-400 transition duration-300">Skills</a>
-                    <a href="#projects" class="text-gray-300 hover:text-blue-400 transition duration-300">Projects</a>
-                    <a href="#contact" class="text-gray-300 hover:text-blue-400 transition duration-300">Contact</a>
+                    <a href="#home" class="text-cyan-100 hover:text-cyan-300 transition duration-300">Home</a>
+                    <a href="#about" class="text-cyan-100 hover:text-cyan-300 transition duration-300">About</a>
+                    <a href="#skills" class="text-cyan-100 hover:text-cyan-300 transition duration-300">Skills</a>
+                    <a href="#projects" class="text-cyan-100 hover:text-cyan-300 transition duration-300">Projects</a>
+                    <a href="#certifications" onclick="showCertificationsPage()" class="text-cyan-100 hover:text-cyan-300 transition duration-300 cursor-pointer">Certifications</a>
+                    <a href="#contact" class="text-cyan-100 hover:text-cyan-300 transition duration-300">Contact</a>
                 </div>
-                <button id="mobile-menu-btn" class="md:hidden text-gray-300">
+                <button id="mobile-menu-btn" class="md:hidden text-cyan-100">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
@@ -137,18 +139,18 @@
         <div class="text-center px-4 animate-fade-in relative z-10">
             <div class="relative w-48 h-48 mx-auto mb-8 mt-8">
                 <!-- Animated rings -->
-                <div class="absolute inset-0 rounded-full border-2 border-blue-400 animate-spin opacity-30"></div>
-                <div class="absolute inset-2 rounded-full border-2 border-purple-400 animate-spin opacity-40" style="animation-direction: reverse; animation-duration: 3s;"></div>
-                <div class="absolute inset-4 rounded-full border-2 border-green-400 animate-spin opacity-50" style="animation-duration: 2s;"></div>
+                <div class="absolute inset-0 rounded-full border-2 border-cyan-300 animate-spin opacity-40"></div>
+                <div class="absolute inset-2 rounded-full border-2 border-teal-300 animate-spin opacity-50" style="animation-direction: reverse; animation-duration: 3s;"></div>
+                <div class="absolute inset-4 rounded-full border-2 border-blue-300 animate-spin opacity-60" style="animation-duration: 2s;"></div>
                 
                 <!-- Glowing background -->
-                <div class="absolute inset-6 bg-gradient-to-br from-blue-500 via-purple-500 to-green-500 rounded-full animate-pulse shadow-2xl"></div>
+                <div class="absolute inset-6 bg-gradient-to-br from-cyan-400 via-teal-400 to-blue-400 rounded-full animate-pulse shadow-2xl"></div>
                 
                 <!-- Profile image with effects -->
                 <img 
-                    src="C:\Users\91994\Pictures\Saved Pictures\profil1.jpg"
-                    alt="VARSHINI CHANDRASHEKAR - Computer science graduate" 
-                    class="relative z-10 w-36 h-36 rounded-full object-cover border-4 border-white shadow-xl mx-auto mt-6 hover:scale-105 transition-all duration-500 hover:shadow-2xl"
+                    src="C:\Users\91994\Pictures\Saved Pictures\pro1.jpg" 
+                    alt="varshinichandrashekar- computer science graduate" 
+                    class="relative z-10 w-48 h-48 rounded-full object-cover border-4 border-white shadow-xl mx-auto mt-6 hover:scale-105 transition-all duration-500 hover:shadow-2xl"
                     style="filter: brightness(1.1) contrast(1.1) saturate(1.1);"
                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
                 >
@@ -159,68 +161,62 @@
                 </div>
                 
                 <!-- Floating particles -->
-                <div class="absolute top-4 left-4 w-2 h-2 bg-blue-400 rounded-full animate-bounce opacity-60" style="animation-delay: 0s;"></div>
-                <div class="absolute top-8 right-6 w-1.5 h-1.5 bg-purple-400 rounded-full animate-bounce opacity-70" style="animation-delay: 0.5s;"></div>
-                <div class="absolute bottom-6 left-8 w-2 h-2 bg-green-400 rounded-full animate-bounce opacity-80" style="animation-delay: 1s;"></div>
-                <div class="absolute bottom-4 right-4 w-1.5 h-1.5 bg-yellow-400 rounded-full animate-bounce opacity-60" style="animation-delay: 1.5s;"></div>
+                <div class="absolute top-4 left-4 w-2 h-2 bg-cyan-300 rounded-full animate-bounce opacity-70" style="animation-delay: 0s;"></div>
+                <div class="absolute top-8 right-6 w-1.5 h-1.5 bg-teal-300 rounded-full animate-bounce opacity-80" style="animation-delay: 0.5s;"></div>
+                <div class="absolute bottom-6 left-8 w-2 h-2 bg-blue-300 rounded-full animate-bounce opacity-90" style="animation-delay: 1s;"></div>
+                <div class="absolute bottom-4 right-4 w-1.5 h-1.5 bg-sky-300 rounded-full animate-bounce opacity-70" style="animation-delay: 1.5s;"></div>
             </div>
-            <h1 class="text-5xl md:text-6xl font-bold mb-4">VARSHINI CHANDRASHEKAR</h1>
-            <p class="text-xl md:text-2xl mb-8 opacity-90">Computer science graduate</p>
-            <p class="text-lg mb-8 max-w-2xl mx-auto opacity-80">Passionate about building robust IT infrastructure and solving complex technical challenges with 8+ years of experience</p>
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">Varshini chandrashekar</h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90">computer science graduate</p>
+            <p class="text-lg mb-8 max-w-2xl mx-auto opacity-80">Passionate learner|On a journey to build smarter, kinder tech| </p>
             <div class="space-x-4">
-                <button onclick="scrollToSection('projects')" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">View My Work</button>
+                <br>
+                <button onclick="scrollToSection('projects')" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-blue-50 transition duration-300">View My Work</button>
                 <button onclick="scrollToSection('contact')" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition duration-300">Get In Touch</button>
             </div>
         </div>
     </section>
-
+    <br>
+    <br>
     <!-- About Section -->
     <section id="about" class="py-20 dark-animated-bg">
         <div class="max-w-6xl mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-white mb-4">About Me</h2>
-                <div class="w-20 h-1 bg-blue-400 mx-auto"></div>
+                <div class="w-20 h-1 bg-cyan-400 mx-auto"></div>
             </div>
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <h3 class="text-2xl font-semibold text-white mb-6">IT Professional & Problem Solver</h3>
-                    <p class="text-gray-300 mb-6 leading-relaxed">
-                        With over 8 years of experience in IT systems administration, I specialize in designing and maintaining enterprise-level infrastructure. My expertise spans cloud computing, network security, and automation solutions.
+                    <p class="text-gray-200 mb-6 leading-relaxed">
+                        an MCA graduate with a strong passion for technology, innovation, and problem-solving. My expertise lies in Artificial Intelligence, Machine Learning, Cloud Computing, and UI/UX design, with hands-on experience developing impactful projects like EpiCare, a health monitoring app for epilepsy patients.
                     </p>
-                    <p class="text-gray-300 mb-6 leading-relaxed">
-                        I'm passionate about leveraging technology to streamline business operations and enhance productivity. I believe in continuous learning and staying updated with the latest industry trends and best practices.
+                    <p class="text-gray-200 mb-6 leading-relaxed">
+                        I enjoy turning ideas into practical solutions that improve lives, blending technical knowledge with creativity. With a strong curiosity and commitment to learning, I continuously explore new tools, trends, and techniques to grow as a developer. My goal is to create meaningful technology that inspires change and makes a real-world difference.
                     </p>
                     <div class="grid grid-cols-2 gap-4">
                         <div class="text-center p-4 dark-card-bg rounded-lg">
-                            <div class="text-3xl font-bold text-blue-400">8+</div>
-                            <div class="text-gray-300">Years Experience</div>
+                            <div class="text-3xl font-bold text-cyan-300">work Experience</div>
+                            <div class="text-gray-200">fresher</div>
                         </div>
                         <div class="text-center p-4 dark-card-bg rounded-lg">
-                            <div class="text-3xl font-bold text-blue-400">50+</div>
-                            <div class="text-gray-300">Projects Completed</div>
+                            <div class="text-3xl font-bold text-cyan-300">Projects</div>
+                            <div class="text-gray-200">5+ hands on Project</div>
                         </div>
                     </div>
                 </div>
                 <div class="text-center">
-                    <div class="w-64 h-64 mx-auto mb-8 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center text-8xl text-white shadow-2xl">
-                        🖥️
+                    <div class="w-64 h-64 mx-auto mb-8 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-full flex items-center justify-center text-8xl text-white shadow-2xl">
+                    <img src="C:\Users\91994\Pictures\giphy.gif">
                     </div>
                     <div class="grid grid-cols-2 gap-4 max-w-md mx-auto">
                         <div class="dark-card-bg p-4 rounded-lg text-center">
-                            <div class="text-2xl font-bold text-blue-400">8+</div>
-                            <div class="text-sm text-gray-300">Years Experience</div>
+                            <div class="text-2xl font-bold text-blue-300">99.9%</div>
+                            <div class="text-sm text-gray-200">Uptime Achieved</div>
                         </div>
                         <div class="dark-card-bg p-4 rounded-lg text-center">
-                            <div class="text-2xl font-bold text-green-400">50+</div>
-                            <div class="text-sm text-gray-300">Projects Completed</div>
-                        </div>
-                        <div class="dark-card-bg p-4 rounded-lg text-center">
-                            <div class="text-2xl font-bold text-purple-400">99.9%</div>
-                            <div class="text-sm text-gray-300">Uptime Achieved</div>
-                        </div>
-                        <div class="dark-card-bg p-4 rounded-lg text-center">
-                            <div class="text-2xl font-bold text-yellow-400">24/7</div>
-                            <div class="text-sm text-gray-300">Support Ready</div>
+                            <div class="text-2xl font-bold text-sky-300">24/7</div>
+                            <div class="text-sm text-gray-200">Support Ready</div>
                         </div>
                     </div>
                 </div>
@@ -231,7 +227,7 @@
     <!-- Skills Section -->
     <section id="skills" class="py-20 dark-animated-bg relative overflow-hidden">
         <!-- Network Topology Background -->
-        <div class="absolute inset-0 opacity-5">
+        <div class="absolute inset-0 opacity-10">
             <svg class="w-full h-full" viewBox="0 0 1200 800">
                 <!-- Network topology lines -->
                 <g stroke="#60a5fa" stroke-width="1" fill="none">
@@ -254,7 +250,7 @@
         <div class="max-w-6xl mx-auto px-4 relative z-10">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-white mb-4">Technical Skills</h2>
-                <div class="w-20 h-1 bg-blue-400 mx-auto"></div>
+                <div class="w-20 h-1 bg-cyan-400 mx-auto"></div>
             </div>
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
@@ -262,62 +258,48 @@
                     <div class="space-y-6">
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="text-gray-200 font-medium">Windows Server Administration</span>
-                                <span class="text-gray-300">95%</span>
+                                <span class="text-gray-100 font-medium">Full stack web development</span>
+                                <span class="text-gray-200">95%</span>
                             </div>
-                            <div class="w-full bg-gray-700 rounded-full h-3">
-                                <div class="skill-bar bg-blue-500 h-3 rounded-full" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="flex justify-between mb-2">
-                                <span class="text-gray-200 font-medium">Linux/Unix Systems</span>
-                                <span class="text-gray-300">90%</span>
-                            </div>
-                            <div class="w-full bg-gray-700 rounded-full h-3">
-                                <div class="skill-bar bg-green-500 h-3 rounded-full" style="width: 90%"></div>
+                            <div class="w-full bg-gray-600 rounded-full h-3">
+                                <div class="skill-bar bg-cyan-400 h-3 rounded-full" style="width: 95%"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="text-gray-200 font-medium">Network Security</span>
-                                <span class="text-gray-300">88%</span>
+                                <span class="text-gray-100 font-medium">Python-based AIML</span>
+                                <span class="text-gray-200">90%</span>
                             </div>
-                            <div class="w-full bg-gray-700 rounded-full h-3">
-                                <div class="skill-bar bg-red-500 h-3 rounded-full" style="width: 88%"></div>
+                            <div class="w-full bg-gray-600 rounded-full h-3">
+                                <div class="skill-bar bg-teal-400 h-3 rounded-full" style="width: 90%"></div>
                             </div>
                         </div>
                         <div>
                             <div class="flex justify-between mb-2">
-                                <span class="text-gray-200 font-medium">Cloud Platforms (AWS/Azure)</span>
-                                <span class="text-gray-300">85%</span>
+                                <span class="text-gray-100 font-medium">Data visualization in power bi</span>
+                                <span class="text-gray-200">50%</span>
                             </div>
-                            <div class="w-full bg-gray-700 rounded-full h-3">
-                                <div class="skill-bar bg-purple-500 h-3 rounded-full" style="width: 85%"></div>
+                            <div class="w-full bg-gray-600 rounded-full h-3">
+                                <div class="skill-bar bg-blue-400 h-3 rounded-full" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-100 font-medium">Cloud Platforms (AWS/Azure)</span>
+                                <span class="text-gray-200">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-600 rounded-full h-3">
+                                <div class="skill-bar bg-sky-400 h-3 rounded-full" style="width: 85%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div>
                     <h3 class="text-2xl font-semibold text-white mb-8">Certifications & Tools</h3>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="dark-card-bg p-6 rounded-lg shadow-lg text-center card-hover cursor-pointer" onclick="openCertModal()">
-                            <div class="text-3xl mb-3">🏆</div>
-                            <h4 class="font-semibold text-white">CompTIA Security+</h4>
-                            <p class="text-sm text-gray-400 mt-2">Click to view certificate</p>
-                        </div>
-                        <div class="dark-card-bg p-6 rounded-lg shadow-lg text-center card-hover">
-                            <div class="text-3xl mb-3">☁️</div>
-                            <h4 class="font-semibold text-white">AWS Certified</h4>
-                        </div>
-                        <div class="dark-card-bg p-6 rounded-lg shadow-lg text-center card-hover">
-                            <div class="text-3xl mb-3">🔧</div>
-                            <h4 class="font-semibold text-white">VMware vSphere</h4>
-                        </div>
-                        <div class="dark-card-bg p-6 rounded-lg shadow-lg text-center card-hover">
-                            <div class="text-3xl mb-3">🐳</div>
-                            <h4 class="font-semibold text-white">Docker & K8s</h4>
-                        </div>
+                    <div class="mt-8 text-center">
+                        <button onclick="showCertificationsPage()" class="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition duration-300">
+                            View All Certifications & Tools →
+                        </button>
                     </div>
                 </div>
             </div>
@@ -327,7 +309,7 @@
     <!-- Projects Section -->
     <section id="projects" class="py-20 dark-animated-bg relative overflow-hidden">
         <!-- Data Center Visualization Background -->
-        <div class="absolute inset-0 opacity-5">
+        <div class="absolute inset-0 opacity-10">
             <div class="w-full h-full flex justify-center items-center">
                 <div class="grid grid-cols-8 gap-2">
                     <!-- Server rack visualization -->
@@ -346,52 +328,52 @@
         <div class="max-w-6xl mx-auto px-4 relative z-10">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-white mb-4">Featured Projects</h2>
-                <div class="w-20 h-1 bg-blue-400 mx-auto"></div>
+                <div class="w-20 h-1 bg-cyan-400 mx-auto"></div>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="dark-card-bg rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-6xl text-white">
+                <div class="dark-card-bg rounded-lg shadow-lg overflow-hidden card-hover cursor-pointer" onclick="openProjectModal('enterprise')">
+                    <div class="h-48 bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center text-6xl text-white">
                         🏢
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-white mb-3">Enterprise Infrastructure Overhaul</h3>
-                        <p class="text-gray-300 mb-4">Migrated 500+ user environment to cloud-hybrid infrastructure, reducing costs by 40% and improving uptime to 99.9%.</p>
+                        <p class="text-gray-200 mb-4">Migrated 500+ user environment to cloud-hybrid infrastructure, reducing costs by 40% and improving uptime to 99.9%.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30">AWS</span>
-                            <span class="px-3 py-1 bg-green-500/20 text-green-300 text-sm rounded-full border border-green-500/30">VMware</span>
-                            <span class="px-3 py-1 bg-purple-500/20 text-purple-300 text-sm rounded-full border border-purple-500/30">PowerShell</span>
+                            <span class="px-3 py-1 bg-cyan-400/20 text-cyan-200 text-sm rounded-full border border-cyan-400/30">AWS</span>
+                            <span class="px-3 py-1 bg-teal-400/20 text-teal-200 text-sm rounded-full border border-teal-400/30">VMware</span>
+                            <span class="px-3 py-1 bg-blue-400/20 text-blue-200 text-sm rounded-full border border-blue-400/30">PowerShell</span>
                         </div>
-                        <button class="text-blue-400 font-semibold hover:text-blue-300 transition duration-300">Learn More →</button>
+                        <button class="text-cyan-300 font-semibold hover:text-cyan-200 transition duration-300">Learn More →</button>
                     </div>
                 </div>
-                <div class="dark-card-bg rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center text-6xl text-white">
+                <div class="dark-card-bg rounded-lg shadow-lg overflow-hidden card-hover cursor-pointer" onclick="openProjectModal('security')">
+                    <div class="h-48 bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-6xl text-white">
                         🔒
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-white mb-3">Security Automation Platform</h3>
-                        <p class="text-gray-300 mb-4">Developed automated security monitoring system that reduced incident response time by 75% and prevented 200+ security threats.</p>
+                        <p class="text-gray-200 mb-4">Developed automated security monitoring system that reduced incident response time by 75% and prevented 200+ security threats.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-red-500/20 text-red-300 text-sm rounded-full border border-red-500/30">SIEM</span>
-                            <span class="px-3 py-1 bg-yellow-500/20 text-yellow-300 text-sm rounded-full border border-yellow-500/30">Python</span>
-                            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30">Splunk</span>
+                            <span class="px-3 py-1 bg-red-400/20 text-red-200 text-sm rounded-full border border-red-400/30">SIEM</span>
+                            <span class="px-3 py-1 bg-amber-400/20 text-amber-200 text-sm rounded-full border border-amber-400/30">Python</span>
+                            <span class="px-3 py-1 bg-cyan-400/20 text-cyan-200 text-sm rounded-full border border-cyan-400/30">Splunk</span>
                         </div>
-                        <button class="text-blue-400 font-semibold hover:text-blue-300 transition duration-300">Learn More →</button>
+                        <button class="text-cyan-300 font-semibold hover:text-cyan-200 transition duration-300">Learn More →</button>
                     </div>
                 </div>
-                <div class="dark-card-bg rounded-lg shadow-lg overflow-hidden card-hover">
-                    <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center text-6xl text-white">
+                <div class="dark-card-bg rounded-lg shadow-lg overflow-hidden card-hover cursor-pointer" onclick="openProjectModal('monitoring')">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-6xl text-white">
                         📊
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold text-white mb-3">Network Monitoring Dashboard</h3>
-                        <p class="text-gray-300 mb-4">Built real-time network monitoring solution providing 360° visibility into network performance and health metrics.</p>
+                        <p class="text-gray-200 mb-4">Built real-time network monitoring solution providing 360° visibility into network performance and health metrics.</p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="px-3 py-1 bg-orange-500/20 text-orange-300 text-sm rounded-full border border-orange-500/30">Grafana</span>
-                            <span class="px-3 py-1 bg-green-500/20 text-green-300 text-sm rounded-full border border-green-500/30">SNMP</span>
-                            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30">Docker</span>
+                            <span class="px-3 py-1 bg-orange-400/20 text-orange-200 text-sm rounded-full border border-orange-400/30">Grafana</span>
+                            <span class="px-3 py-1 bg-teal-400/20 text-teal-200 text-sm rounded-full border border-teal-400/30">SNMP</span>
+                            <span class="px-3 py-1 bg-cyan-400/20 text-cyan-200 text-sm rounded-full border border-cyan-400/30">Docker</span>
                         </div>
-                        <button class="text-blue-400 font-semibold hover:text-blue-300 transition duration-300">Learn More →</button>
+                        <button class="text-cyan-300 font-semibold hover:text-cyan-200 transition duration-300">Learn More →</button>
                     </div>
                 </div>
             </div>
@@ -414,28 +396,37 @@
                             <div class="text-2xl">📧</div>
                             <div>
                                 <div class="font-semibold">Email</div>
-                                <div class="opacity-80">alex.chen@email.com</div>
+                                <div class="opacity-80">chandrashekarvarshini984@gmail.com</div>
                             </div>
                         </div>
                         <div class="flex items-center space-x-4">
                             <div class="text-2xl">📱</div>
                             <div>
                                 <div class="font-semibold">Phone</div>
-                                <div class="opacity-80">+1 (555) 123-4567</div>
+                                <div class="opacity-80">+91 9945847824</div>
                             </div>
                         </div>
                         <div class="flex items-center space-x-4">
                             <div class="text-2xl">📍</div>
                             <div>
                                 <div class="font-semibold">Location</div>
-                                <div class="opacity-80">San Francisco, CA</div>
+                                <div class="opacity-80">Bangalore,Karnataka,India</div>
                             </div>
                         </div>
                         <div class="flex items-center space-x-4">
-                            <div class="text-2xl">💼</div>
+                            <img src="https://cdn-icons-png.flaticon.com/24/174/174857.png" alt="LinkedIn" style="height: 20px; margin-right: 5px;">
+                            <a href="www.linkedin.com/in/varshini-chandrasheka" target="_blank">
                             <div>
                                 <div class="font-semibold">LinkedIn</div>
-                                <div class="opacity-80">linkedin.com/in/alexchen</div>
+                                <div class="opacity-80">www.linkedin.com/in/varshini-chandrashekar</div>
+                                </a>
+                            </div>
+                        </div>
+                            <div class="flex items-center space-x-4">
+                                <img src="https://cdn-icons-png.flaticon.com/128/3291/3291695.png" alt="Instagram" style="height: 20px; margin-right: 5px;">
+                        <div>
+                                <div class="font-semibold">GitHub</div>
+                                <div class="opacity-80">https://github.com/Varshini-2002-dev</div>
                             </div>
                         </div>
                     </div>
@@ -454,12 +445,414 @@
                             <label class="block text-sm font-medium mb-2">Message</label>
                             <textarea rows="4" required class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-white/40" placeholder="Tell me about your project..."></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-white text-blue-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">Send Message</button>
+                        <button type="submit" class="w-full bg-white text-blue-600 py-3 rounded-lg font-semibold hover:bg-blue-50 transition duration-300">Send Message</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Certifications Page -->
+    <div id="certificationsPage" class="fixed inset-0 bg-slate-800 z-50 hidden overflow-y-auto">
+        <!-- Navigation for Certifications Page -->
+        <nav class="bg-slate-700/90 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-cyan-400/50">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="flex justify-between items-center py-4">
+                    <div class="text-2xl font-bold text-white">Certifications & Tools</div>
+                    <button onclick="hideCertificationsPage()" class="text-cyan-200 hover:text-cyan-300 transition duration-300">
+                        ← Back to Portfolio
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Certifications Content -->
+        <div class="dark-animated-bg min-h-screen py-20">
+            <div class="max-w-6xl mx-auto px-4">
+                <!-- Professional Certifications Section -->
+                <section class="mb-16">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-bold text-white mb-4">Professional Certifications</h2>
+                        <div class="w-20 h-1 bg-cyan-400 mx-auto"></div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- CompTIA Security+ -->
+                        <div class="dark-card-bg rounded-lg shadow-lg overflow-hidden card-hover cursor-pointer" onclick="openCertModal()">
+                            <div class="h-32 bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center text-4xl text-white">
+                                🛡️
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-white mb-2">CompTIA Security+</h3>
+                                <p class="text-gray-200 text-sm mb-3">Cybersecurity fundamentals and best practices</p>
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="text-cyan-300 font-semibold">Active</span>
+                                    <span class="text-gray-300 text-sm">Expires: 2027</span>
+                                </div>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="px-2 py-1 bg-red-400/20 text-red-200 text-xs rounded border border-red-400/30">Security</span>
+                                    <span class="px-2 py-1 bg-blue-400/20 text-blue-200 text-xs rounded border border-blue-400/30">Risk Management</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- AWS Solutions Architect -->
+                        <div class="dark-card-bg rounded-lg shadow-lg overflow-hidden card-hover">
+                            <div class="h-32 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center text-4xl text-white">
+                                ☁️
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-white mb-2">AWS Solutions Architect</h3>
+                                <p class="text-gray-200 text-sm mb-3">Cloud architecture and AWS services expertise</p>
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="text-cyan-300 font-semibold">Active</span>
+                                    <span class="text-gray-300 text-sm">Expires: 2026</span>
+                                </div>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="px-2 py-1 bg-orange-400/20 text-orange-200 text-xs rounded border border-orange-400/30">AWS</span>
+                                    <span class="px-2 py-1 bg-cyan-400/20 text-cyan-200 text-xs rounded border border-cyan-400/30">Cloud</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- VMware vSphere -->
+                        <div class="dark-card-bg rounded-lg shadow-lg overflow-hidden card-hover">
+                            <div class="h-32 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-4xl text-white">
+                                🔧
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-white mb-2">VMware vSphere</h3>
+                                <p class="text-gray-200 text-sm mb-3">Virtualization and datacenter management</p>
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="text-cyan-300 font-semibold">Active</span>
+                                    <span class="text-gray-300 text-sm">Expires: 2025</span>
+                                </div>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="px-2 py-1 bg-blue-400/20 text-blue-200 text-xs rounded border border-blue-400/30">VMware</span>
+                                    <span class="px-2 py-1 bg-teal-400/20 text-teal-200 text-xs rounded border border-teal-400/30">Virtualization</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Microsoft Azure -->
+                        <div class="dark-card-bg rounded-lg shadow-lg overflow-hidden card-hover">
+                            <div class="h-32 bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center text-4xl text-white">
+                                🌐
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-white mb-2">Microsoft Azure Fundamentals</h3>
+                                <p class="text-gray-200 text-sm mb-3">Azure cloud services and solutions</p>
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="text-cyan-300 font-semibold">Active</span>
+                                    <span class="text-gray-300 text-sm">No Expiration</span>
+                                </div>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="px-2 py-1 bg-cyan-400/20 text-cyan-200 text-xs rounded border border-cyan-400/30">Azure</span>
+                                    <span class="px-2 py-1 bg-blue-400/20 text-blue-200 text-xs rounded border border-blue-400/30">Microsoft</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cisco CCNA -->
+                        <div class="dark-card-bg rounded-lg shadow-lg overflow-hidden card-hover">
+                            <div class="h-32 bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-4xl text-white">
+                                🌐
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-white mb-2">Cisco CCNA</h3>
+                                <p class="text-gray-200 text-sm mb-3">Network fundamentals and Cisco technologies</p>
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="text-cyan-300 font-semibold">Active</span>
+                                    <span class="text-gray-300 text-sm">Expires: 2026</span>
+                                </div>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="px-2 py-1 bg-teal-400/20 text-teal-200 text-xs rounded border border-teal-400/30">Cisco</span>
+                                    <span class="px-2 py-1 bg-green-400/20 text-green-200 text-xs rounded border border-green-400/30">Networking</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Docker & Kubernetes -->
+                        <div class="dark-card-bg rounded-lg shadow-lg overflow-hidden card-hover">
+                            <div class="h-32 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-4xl text-white">
+                                🐳
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-white mb-2">Docker & Kubernetes</h3>
+                                <p class="text-gray-200 text-sm mb-3">Container orchestration and management</p>
+                                <div class="flex justify-between items-center mb-3">
+                                    <span class="text-cyan-300 font-semibold">Active</span>
+                                    <span class="text-gray-300 text-sm">Expires: 2025</span>
+                                </div>
+                                <div class="flex flex-wrap gap-1">
+                                    <span class="px-2 py-1 bg-purple-400/20 text-purple-200 text-xs rounded border border-purple-400/30">Docker</span>
+                                    <span class="px-2 py-1 bg-blue-400/20 text-blue-200 text-xs rounded border border-blue-400/30">K8s</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Technical Tools Section -->
+                <section class="mb-16">
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-bold text-white mb-4">Technical Tools & Platforms</h2>
+                        <div class="w-20 h-1 bg-cyan-400 mx-auto"></div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Operating Systems -->
+                        <div class="dark-card-bg rounded-lg p-6 text-center">
+                            <div class="text-3xl mb-4">💻</div>
+                            <h4 class="text-lg font-semibold text-white mb-3">Operating Systems</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">Windows Server</span>
+                                    <span class="text-cyan-300">Expert</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">Linux (RHEL/Ubuntu)</span>
+                                    <span class="text-cyan-300">Advanced</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">macOS</span>
+                                    <span class="text-teal-300">Intermediate</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Cloud Platforms -->
+                        <div class="dark-card-bg rounded-lg p-6 text-center">
+                            <div class="text-3xl mb-4">☁️</div>
+                            <h4 class="text-lg font-semibold text-white mb-3">Cloud Platforms</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">AWS</span>
+                                    <span class="text-cyan-300">Expert</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">Microsoft Azure</span>
+                                    <span class="text-cyan-300">Advanced</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">Google Cloud</span>
+                                    <span class="text-teal-300">Intermediate</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Security Tools -->
+                        <div class="dark-card-bg rounded-lg p-6 text-center">
+                            <div class="text-3xl mb-4">🔒</div>
+                            <h4 class="text-lg font-semibold text-white mb-3">Security Tools</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">Splunk</span>
+                                    <span class="text-cyan-300">Advanced</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">Nessus</span>
+                                    <span class="text-cyan-300">Advanced</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">Wireshark</span>
+                                    <span class="text-teal-300">Intermediate</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Monitoring Tools -->
+                        <div class="dark-card-bg rounded-lg p-6 text-center">
+                            <div class="text-3xl mb-4">📊</div>
+                            <h4 class="text-lg font-semibold text-white mb-3">Monitoring</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">Grafana</span>
+                                    <span class="text-cyan-300">Advanced</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">Nagios</span>
+                                    <span class="text-cyan-300">Advanced</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">Zabbix</span>
+                                    <span class="text-teal-300">Intermediate</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Automation Tools -->
+                        <div class="dark-card-bg rounded-lg p-6 text-center">
+                            <div class="text-3xl mb-4">🤖</div>
+                            <h4 class="text-lg font-semibold text-white mb-3">Automation</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">Ansible</span>
+                                    <span class="text-cyan-300">Advanced</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">PowerShell</span>
+                                    <span class="text-cyan-300">Expert</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">Terraform</span>
+                                    <span class="text-teal-300">Intermediate</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Database Tools -->
+                        <div class="dark-card-bg rounded-lg p-6 text-center">
+                            <div class="text-3xl mb-4">🗄️</div>
+                            <h4 class="text-lg font-semibold text-white mb-3">Databases</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">SQL Server</span>
+                                    <span class="text-cyan-300">Advanced</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">MySQL</span>
+                                    <span class="text-cyan-300">Advanced</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">PostgreSQL</span>
+                                    <span class="text-teal-300">Intermediate</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Networking Tools -->
+                        <div class="dark-card-bg rounded-lg p-6 text-center">
+                            <div class="text-3xl mb-4">🌐</div>
+                            <h4 class="text-lg font-semibold text-white mb-3">Networking</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">Cisco IOS</span>
+                                    <span class="text-cyan-300">Advanced</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">pfSense</span>
+                                    <span class="text-cyan-300">Advanced</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">SolarWinds</span>
+                                    <span class="text-teal-300">Intermediate</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Virtualization -->
+                        <div class="dark-card-bg rounded-lg p-6 text-center">
+                            <div class="text-3xl mb-4">📦</div>
+                            <h4 class="text-lg font-semibold text-white mb-3">Virtualization</h4>
+                            <div class="space-y-2">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">VMware vSphere</span>
+                                    <span class="text-cyan-300">Expert</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">Hyper-V</span>
+                                    <span class="text-cyan-300">Advanced</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-200">Proxmox</span>
+                                    <span class="text-teal-300">Intermediate</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills Timeline -->
+                <section>
+                    <div class="text-center mb-12">
+                        <h2 class="text-4xl font-bold text-white mb-4">Certification Timeline</h2>
+                        <div class="w-20 h-1 bg-cyan-400 mx-auto"></div>
+                    </div>
+
+                    <div class="relative">
+                        <!-- Timeline line -->
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-cyan-400"></div>
+                        
+                        <!-- Timeline items -->
+                        <div class="space-y-12">
+                            <div class="flex items-center">
+                                <div class="w-1/2 pr-8 text-right">
+                                    <div class="dark-card-bg p-4 rounded-lg">
+                                        <h4 class="font-semibold text-white">CompTIA Security+</h4>
+                                        <p class="text-gray-200 text-sm">March 2024</p>
+                                    </div>
+                                </div>
+                                <div class="w-4 h-4 bg-cyan-400 rounded-full relative z-10"></div>
+                                <div class="w-1/2 pl-8"></div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <div class="w-1/2 pr-8"></div>
+                                <div class="w-4 h-4 bg-teal-400 rounded-full relative z-10"></div>
+                                <div class="w-1/2 pl-8">
+                                    <div class="dark-card-bg p-4 rounded-lg">
+                                        <h4 class="font-semibold text-white">AWS Solutions Architect</h4>
+                                        <p class="text-gray-200 text-sm">January 2024</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <div class="w-1/2 pr-8 text-right">
+                                    <div class="dark-card-bg p-4 rounded-lg">
+                                        <h4 class="font-semibold text-white">VMware vSphere</h4>
+                                        <p class="text-gray-200 text-sm">September 2023</p>
+                                    </div>
+                                </div>
+                                <div class="w-4 h-4 bg-blue-400 rounded-full relative z-10"></div>
+                                <div class="w-1/2 pl-8"></div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <div class="w-1/2 pr-8"></div>
+                                <div class="w-4 h-4 bg-purple-400 rounded-full relative z-10"></div>
+                                <div class="w-1/2 pl-8">
+                                    <div class="dark-card-bg p-4 rounded-lg">
+                                        <h4 class="font-semibold text-white">Cisco CCNA</h4>
+                                        <p class="text-gray-200 text-sm">June 2023</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 id="projectTitle" class="text-2xl font-bold text-gray-800">Project Details</h3>
+                    <button onclick="closeProjectModal()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+                </div>
+                
+                <div id="projectContent" class="space-y-6">
+                    <!-- Project content will be dynamically loaded here -->
+                </div>
+                
+                <div class="mt-8 flex justify-between items-center">
+                    <div class="flex space-x-4">
+                        <button onclick="window.open('https://github.com/Varshini-2002-dev', '_blank')" class="bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition duration-300">
+                            View on GitHub
+                        </button>
+                        <button onclick="alert('Live demo would open here')" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                            Live Demo
+                        </button>
+                    </div>
+                    <button onclick="closeProjectModal()" class="text-gray-600 hover:text-gray-800">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Certification Modal -->
     <div id="certModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
@@ -540,14 +933,255 @@
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8 border-t border-gray-700">
-        <div class="max-w-6xl mx-auto px-4 text-center">
-            <p>&copy; 2024 Alex Chen. All rights reserved.</p>
-            <p class="text-gray-400 mt-2">Built with passion for technology and innovation</p>
+    <footer class="bg-slate-800 text-white py-8 border-t border-cyan-400/30">
+        <div class="max-w-6xl mx-auto px-4 text-center">    
+            <p>&copy; 2025 varshini chandrashekar. All rights reserved.</p>
+            <p class="text-gray-300 mt-2">Built with passion for technology and innovation</p>
         </div>
     </footer>
 
     <script>
+        // Project data
+        const projectData = {
+            enterprise: {
+                title: "Enterprise Infrastructure Overhaul",
+                content: `
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4">Project Overview</h4>
+                            <p class="text-gray-600 mb-4">Led a comprehensive infrastructure modernization project for a 500+ employee organization, migrating from legacy on-premises systems to a hybrid cloud architecture.</p>
+                            
+                            <h5 class="font-semibold mb-2">Key Achievements:</h5>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>Reduced operational costs by 40%</li>
+                                <li>Improved system uptime to 99.9%</li>
+                                <li>Enhanced security posture</li>
+                                <li>Streamlined backup and disaster recovery</li>
+                                <li>Enabled remote work capabilities</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4">Technical Implementation</h4>
+                            <div class="space-y-3">
+                                <div class="bg-gray-50 p-3 rounded">
+                                    <h6 class="font-semibold">Cloud Migration</h6>
+                                    <p class="text-sm text-gray-600">Migrated 80% of workloads to AWS using EC2, RDS, and S3</p>
+                                </div>
+                                <div class="bg-gray-50 p-3 rounded">
+                                    <h6 class="font-semibold">Virtualization</h6>
+                                    <p class="text-sm text-gray-600">Implemented VMware vSphere for remaining on-premises systems</p>
+                                </div>
+                                <div class="bg-gray-50 p-3 rounded">
+                                    <h6 class="font-semibold">Automation</h6>
+                                    <p class="text-sm text-gray-600">Developed PowerShell scripts for automated provisioning</p>
+                                </div>
+                                <div class="bg-gray-50 p-3 rounded">
+                                    <h6 class="font-semibold">Monitoring</h6>
+                                    <p class="text-sm text-gray-600">Implemented comprehensive monitoring with CloudWatch and Grafana</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h4 class="text-xl font-semibold mb-4">Project Timeline & Phases</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-4 h-4 bg-blue-500 rounded-full"></div>
+                                <div>
+                                    <span class="font-semibold">Phase 1 (Months 1-2):</span>
+                                    <span class="text-gray-600">Assessment and planning</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-4 h-4 bg-green-500 rounded-full"></div>
+                                <div>
+                                    <span class="font-semibold">Phase 2 (Months 3-6):</span>
+                                    <span class="text-gray-600">Cloud infrastructure setup and testing</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-4 h-4 bg-yellow-500 rounded-full"></div>
+                                <div>
+                                    <span class="font-semibold">Phase 3 (Months 7-10):</span>
+                                    <span class="text-gray-600">Gradual migration and user training</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-4 h-4 bg-purple-500 rounded-full"></div>
+                                <div>
+                                    <span class="font-semibold">Phase 4 (Months 11-12):</span>
+                                    <span class="text-gray-600">Optimization and documentation</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            security: {
+                title: "Security Automation Platform",
+                content: `
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4">Project Overview</h4>
+                            <p class="text-gray-600 mb-4">Developed an automated security monitoring and incident response platform that significantly improved the organization's security posture and response capabilities.</p>
+                            
+                            <h5 class="font-semibold mb-2">Key Results:</h5>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>75% reduction in incident response time</li>
+                                <li>200+ security threats prevented</li>
+                                <li>24/7 automated monitoring</li>
+                                <li>Reduced false positives by 60%</li>
+                                <li>Comprehensive threat intelligence integration</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4">Security Components</h4>
+                            <div class="space-y-3">
+                                <div class="bg-red-50 p-3 rounded border-l-4 border-red-400">
+                                    <h6 class="font-semibold text-red-800">SIEM Integration</h6>
+                                    <p class="text-sm text-red-600">Splunk-based log analysis and correlation</p>
+                                </div>
+                                <div class="bg-yellow-50 p-3 rounded border-l-4 border-yellow-400">
+                                    <h6 class="font-semibold text-yellow-800">Automated Response</h6>
+                                    <p class="text-sm text-yellow-600">Python-based incident response automation</p>
+                                </div>
+                                <div class="bg-blue-50 p-3 rounded border-l-4 border-blue-400">
+                                    <h6 class="font-semibold text-blue-800">Threat Intelligence</h6>
+                                    <p class="text-sm text-blue-600">Real-time threat feed integration</p>
+                                </div>
+                                <div class="bg-green-50 p-3 rounded border-l-4 border-green-400">
+                                    <h6 class="font-semibold text-green-800">Vulnerability Management</h6>
+                                    <p class="text-sm text-green-600">Automated scanning and remediation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h4 class="text-xl font-semibold mb-4">Architecture & Workflow</h4>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
+                                <div class="bg-white p-3 rounded shadow">
+                                    <div class="text-2xl mb-2">🔍</div>
+                                    <h6 class="font-semibold">Detection</h6>
+                                    <p class="text-xs text-gray-600">Log analysis & pattern recognition</p>
+                                </div>
+                                <div class="bg-white p-3 rounded shadow">
+                                    <div class="text-2xl mb-2">⚡</div>
+                                    <h6 class="font-semibold">Analysis</h6>
+                                    <p class="text-xs text-gray-600">Threat correlation & scoring</p>
+                                </div>
+                                <div class="bg-white p-3 rounded shadow">
+                                    <div class="text-2xl mb-2">🤖</div>
+                                    <h6 class="font-semibold">Response</h6>
+                                    <p class="text-xs text-gray-600">Automated containment actions</p>
+                                </div>
+                                <div class="bg-white p-3 rounded shadow">
+                                    <div class="text-2xl mb-2">📊</div>
+                                    <h6 class="font-semibold">Reporting</h6>
+                                    <p class="text-xs text-gray-600">Executive dashboards & metrics</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `
+            },
+            monitoring: {
+                title: "Network Monitoring Dashboard",
+                content: `
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4">Project Overview</h4>
+                            <p class="text-gray-600 mb-4">Built a comprehensive real-time network monitoring solution providing 360° visibility into network performance, health metrics, and capacity planning.</p>
+                            
+                            <h5 class="font-semibold mb-2">Key Features:</h5>
+                            <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                <li>Real-time network performance monitoring</li>
+                                <li>Predictive capacity planning</li>
+                                <li>Automated alerting and notifications</li>
+                                <li>Historical trend analysis</li>
+                                <li>Multi-vendor device support</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold mb-4">Technical Stack</h4>
+                            <div class="space-y-3">
+                                <div class="bg-orange-50 p-3 rounded border-l-4 border-orange-400">
+                                    <h6 class="font-semibold text-orange-800">Grafana</h6>
+                                    <p class="text-sm text-orange-600">Visualization and dashboard creation</p>
+                                </div>
+                                <div class="bg-teal-50 p-3 rounded border-l-4 border-teal-400">
+                                    <h6 class="font-semibold text-teal-800">SNMP Monitoring</h6>
+                                    <p class="text-sm text-teal-600">Device polling and data collection</p>
+                                </div>
+                                <div class="bg-cyan-50 p-3 rounded border-l-4 border-cyan-400">
+                                    <h6 class="font-semibold text-cyan-800">Docker Containers</h6>
+                                    <p class="text-sm text-cyan-600">Scalable microservices architecture</p>
+                                </div>
+                                <div class="bg-purple-50 p-3 rounded border-l-4 border-purple-400">
+                                    <h6 class="font-semibold text-purple-800">InfluxDB</h6>
+                                    <p class="text-sm text-purple-600">Time-series data storage</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h4 class="text-xl font-semibold mb-4">Dashboard Metrics</h4>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="bg-blue-50 p-4 rounded text-center">
+                                <div class="text-2xl font-bold text-blue-600">99.8%</div>
+                                <div class="text-sm text-blue-800">Network Uptime</div>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded text-center">
+                                <div class="text-2xl font-bold text-green-600">2.3ms</div>
+                                <div class="text-sm text-green-800">Avg Latency</div>
+                            </div>
+                            <div class="bg-yellow-50 p-4 rounded text-center">
+                                <div class="text-2xl font-bold text-yellow-600">850+</div>
+                                <div class="text-sm text-yellow-800">Monitored Devices</div>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded text-center">
+                                <div class="text-2xl font-bold text-purple-600">24/7</div>
+                                <div class="text-sm text-purple-800">Monitoring</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h4 class="text-xl font-semibold mb-4">Monitoring Capabilities</h4>
+                        <div class="grid md:grid-cols-3 gap-4">
+                            <div class="bg-gray-50 p-4 rounded">
+                                <h6 class="font-semibold mb-2">🌐 Network Health</h6>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Bandwidth utilization</li>
+                                    <li>• Packet loss monitoring</li>
+                                    <li>• Interface status tracking</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded">
+                                <h6 class="font-semibold mb-2">⚡ Performance</h6>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Latency measurements</li>
+                                    <li>• Throughput analysis</li>
+                                    <li>• Quality of Service metrics</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded">
+                                <h6 class="font-semibold mb-2">🔔 Alerting</h6>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Threshold-based alerts</li>
+                                    <li>• Escalation procedures</li>
+                                    <li>• Multi-channel notifications</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
         // Smooth scrolling function
         function scrollToSection(sectionId) {
             document.getElementById(sectionId).scrollIntoView({
@@ -563,10 +1197,30 @@
         // Form submission handler
         function handleSubmit(event) {
             event.preventDefault();
-            alert('Thank you for your message! This is a demo form - in a real portfolio, this would send an email.');
+            alert('Thank you for your message! this would send an email.');
         }
 
-        // Modal functions
+        // Project modal functions
+        function openProjectModal(projectKey) {
+            const modal = document.getElementById('projectModal');
+            const title = document.getElementById('projectTitle');
+            const content = document.getElementById('projectContent');
+            
+            const project = projectData[projectKey];
+            if (project) {
+                title.textContent = project.title;
+                content.innerHTML = project.content;
+                modal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeProjectModal() {
+            document.getElementById('projectModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Certification modal functions
         function openCertModal() {
             document.getElementById('certModal').classList.remove('hidden');
             document.body.style.overflow = 'hidden';
@@ -577,10 +1231,27 @@
             document.body.style.overflow = 'auto';
         }
 
-        // Close modal when clicking outside
+        // Certifications page functions
+        function showCertificationsPage() {
+            document.getElementById('certificationsPage').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideCertificationsPage() {
+            document.getElementById('certificationsPage').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modals when clicking outside
         document.getElementById('certModal').addEventListener('click', function(e) {
             if (e.target === this) {
                 closeCertModal();
+            }
+        });
+
+        document.getElementById('projectModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeProjectModal();
             }
         });
 
@@ -692,8 +1363,6 @@
             animate();
         }
 
-
-
         // Binary Rain Animation
         function createBinaryRain() {
             const binaryContainer = document.getElementById('binaryRain');
@@ -723,163 +1392,12 @@
                 binaryContainer.appendChild(column);
             }
         }
-        
-        // Enhanced Network Animation with Data Packets
-        function createAdvancedNetworkAnimation() {
-            const svg = document.getElementById('networkSvg');
-            if (!svg) return;
-            
-            const width = window.innerWidth;
-            const height = window.innerHeight;
-            
-            svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
-            
-            // Create network nodes with data transmission
-            const nodes = [];
-            const nodeCount = 20;
-            
-            for (let i = 0; i < nodeCount; i++) {
-                const node = {
-                    x: Math.random() * width,
-                    y: Math.random() * height,
-                    vx: (Math.random() - 0.5) * 0.3,
-                    vy: (Math.random() - 0.5) * 0.3,
-                    id: i,
-                    dataLoad: Math.random() * 100
-                };
-                nodes.push(node);
-                
-                // Create node element with data indicator
-                const nodeGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-                nodeGroup.setAttribute('id', `node-group-${i}`);
-                
-                const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-                circle.setAttribute('cx', node.x);
-                circle.setAttribute('cy', node.y);
-                circle.setAttribute('r', Math.random() * 3 + 2);
-                const colors = ['#60a5fa', '#34d399', '#a78bfa', '#fbbf24', '#f87171'];
-                circle.setAttribute('fill', colors[Math.floor(Math.random() * colors.length)]);
-                circle.setAttribute('class', 'network-node');
-                circle.setAttribute('id', `node-${i}`);
-                
-                // Add data transmission ring
-                const ring = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-                ring.setAttribute('cx', node.x);
-                ring.setAttribute('cy', node.y);
-                ring.setAttribute('r', 8);
-                ring.setAttribute('fill', 'none');
-                ring.setAttribute('stroke', colors[Math.floor(Math.random() * colors.length)]);
-                ring.setAttribute('stroke-width', '1');
-                ring.setAttribute('opacity', '0.3');
-                ring.setAttribute('class', 'signal-wave');
-                ring.style.animationDelay = `${Math.random() * 2}s`;
-                
-                nodeGroup.appendChild(circle);
-                nodeGroup.appendChild(ring);
-                svg.appendChild(nodeGroup);
-            }
-            
-            // Create data packets
-            function createDataPacket(startNode, endNode) {
-                const packet = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-                packet.setAttribute('r', '2');
-                packet.setAttribute('fill', '#00ff00');
-                packet.setAttribute('opacity', '0.8');
-                
-                const animateMotion = document.createElementNS('http://www.w3.org/2000/svg', 'animateMotion');
-                animateMotion.setAttribute('dur', '2s');
-                animateMotion.setAttribute('repeatCount', 'indefinite');
-                animateMotion.setAttribute('path', `M${startNode.x},${startNode.y} L${endNode.x},${endNode.y}`);
-                
-                packet.appendChild(animateMotion);
-                svg.appendChild(packet);
-                
-                // Remove packet after animation
-                setTimeout(() => {
-                    if (packet.parentNode) {
-                        packet.parentNode.removeChild(packet);
-                    }
-                }, 2000);
-            }
-            
-            // Create connections with data flow
-            function updateConnections() {
-                // Remove existing connections
-                const existingConnections = svg.querySelectorAll('.network-connection');
-                existingConnections.forEach(conn => conn.remove());
-                
-                for (let i = 0; i < nodes.length; i++) {
-                    for (let j = i + 1; j < nodes.length; j++) {
-                        const dx = nodes[i].x - nodes[j].x;
-                        const dy = nodes[i].y - nodes[j].y;
-                        const distance = Math.sqrt(dx * dx + dy * dy);
-                        
-                        if (distance < 150) {
-                            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-                            line.setAttribute('x1', nodes[i].x);
-                            line.setAttribute('y1', nodes[i].y);
-                            line.setAttribute('x2', nodes[j].x);
-                            line.setAttribute('y2', nodes[j].y);
-                            const connectionColors = ['#60a5fa', '#34d399', '#a78bfa', '#fbbf24', '#f87171'];
-                            line.setAttribute('stroke', connectionColors[Math.floor(Math.random() * connectionColors.length)]);
-                            line.setAttribute('stroke-width', '1');
-                            line.setAttribute('opacity', Math.max(0.1, 1 - distance / 150));
-                            line.setAttribute('class', 'network-connection');
-                            svg.appendChild(line);
-                            
-                            // Occasionally create data packets
-                            if (Math.random() < 0.1) {
-                                createDataPacket(nodes[i], nodes[j]);
-                            }
-                        }
-                    }
-                }
-            }
-            
-            // Animation loop
-            function animate() {
-                nodes.forEach((node, index) => {
-                    // Update position
-                    node.x += node.vx;
-                    node.y += node.vy;
-                    
-                    // Bounce off edges
-                    if (node.x <= 0 || node.x >= width) node.vx *= -1;
-                    if (node.y <= 0 || node.y >= height) node.vy *= -1;
-                    
-                    // Keep within bounds
-                    node.x = Math.max(0, Math.min(width, node.x));
-                    node.y = Math.max(0, Math.min(height, node.y));
-                    
-                    // Update node position
-                    const nodeGroup = document.getElementById(`node-group-${index}`);
-                    if (nodeGroup) {
-                        const circle = nodeGroup.querySelector('circle');
-                        const ring = nodeGroup.querySelectorAll('circle')[1];
-                        if (circle) {
-                            circle.setAttribute('cx', node.x);
-                            circle.setAttribute('cy', node.y);
-                        }
-                        if (ring) {
-                            ring.setAttribute('cx', node.x);
-                            ring.setAttribute('cy', node.y);
-                        }
-                    }
-                });
-                
-                updateConnections();
-                requestAnimationFrame(animate);
-            }
-            
-            updateConnections();
-            animate();
-        }
 
         // Initialize animations when page loads
         document.addEventListener('DOMContentLoaded', function() {
             animateSkillBars();
             createBinaryRain();
-            createAdvancedNetworkAnimation();
+            createNetworkAnimation();
         });
 
         // Smooth scroll for navigation links
@@ -887,11 +1405,13 @@
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                target.scrollIntoView({
-                    behavior: 'smooth'
-                });
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9734d462f3db415e',t:'MTc1NTg5MTQ5Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9738d85af5bcb2be',t:'MTc1NTkzMzYwMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
