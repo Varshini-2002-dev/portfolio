@@ -1,1 +1,897 @@
-<p>hello its me</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Chen - IT Professional Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { 
+            background: linear-gradient(-45deg, #1a1a2e, #16213e, #0f3460, #533483);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+        .dark-animated-bg {
+            background: linear-gradient(-45deg, #0f172a, #1e293b, #334155, #475569);
+            background-size: 400% 400%;
+            animation: gradientShift 20s ease infinite;
+        }
+        .dark-card-bg {
+            background: linear-gradient(135deg, #1e293b, #334155);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3); }
+        .skill-bar { transition: width 1s ease-in-out; }
+        .animate-fade-in { animation: fadeIn 0.6s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        
+        /* Network Animation Styles */
+        .network-node { 
+            animation: pulse 2s infinite ease-in-out; 
+            transform-origin: center;
+        }
+        .network-connection { 
+            stroke-dasharray: 5,5; 
+            animation: dash 3s linear infinite; 
+        }
+        @keyframes pulse { 
+            0%, 100% { transform: scale(1); opacity: 0.8; } 
+            50% { transform: scale(1.2); opacity: 1; } 
+        }
+        @keyframes dash { 
+            0% { stroke-dashoffset: 0; } 
+            100% { stroke-dashoffset: -20; } 
+        }
+        
+        /* Data Flow Animations */
+        .data-packet {
+            animation: dataFlow 3s linear infinite;
+        }
+        @keyframes dataFlow {
+            0% { transform: translateX(-100px); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateX(100px); opacity: 0; }
+        }
+        
+        .binary-rain {
+            animation: binaryFall 4s linear infinite;
+        }
+        @keyframes binaryFall {
+            0% { transform: translateY(-100vh); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+        
+        .network-pulse {
+            animation: networkPulse 2s ease-in-out infinite;
+        }
+        @keyframes networkPulse {
+            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+        }
+        
+        .data-stream {
+            animation: streamFlow 2s ease-in-out infinite;
+        }
+        @keyframes streamFlow {
+            0%, 100% { width: 0%; }
+            50% { width: 100%; }
+        }
+        
+        .signal-wave {
+            animation: signalPulse 1.5s ease-in-out infinite;
+        }
+        @keyframes signalPulse {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(2); opacity: 0; }
+        }
+    </style>
+</head>
+<body class="dark-animated-bg text-white">
+    <!-- Navigation -->
+    <nav class="bg-gray-900/90 backdrop-blur-sm shadow-lg fixed w-full top-0 z-50 border-b border-gray-700">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-bold text-white">Alex Chen</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-blue-400 transition duration-300">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-blue-400 transition duration-300">About</a>
+                    <a href="#skills" class="text-gray-300 hover:text-blue-400 transition duration-300">Skills</a>
+                    <a href="#projects" class="text-gray-300 hover:text-blue-400 transition duration-300">Projects</a>
+                    <a href="#contact" class="text-gray-300 hover:text-blue-400 transition duration-300">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center text-white relative overflow-hidden pt-24">
+        <!-- Binary Rain Background -->
+        <div class="absolute inset-0 opacity-10 overflow-hidden">
+            <div id="binaryRain" class="w-full h-full"></div>
+        </div>
+        
+        <!-- Animated Network Background -->
+        <div class="absolute inset-0 opacity-20">
+            <svg id="networkSvg" class="w-full h-full">
+                <!-- Network nodes and connections will be generated by JavaScript -->
+            </svg>
+        </div>
+        
+        <div class="text-center px-4 animate-fade-in relative z-10">
+            <div class="relative w-48 h-48 mx-auto mb-8 mt-8">
+                <!-- Animated rings -->
+                <div class="absolute inset-0 rounded-full border-2 border-blue-400 animate-spin opacity-30"></div>
+                <div class="absolute inset-2 rounded-full border-2 border-purple-400 animate-spin opacity-40" style="animation-direction: reverse; animation-duration: 3s;"></div>
+                <div class="absolute inset-4 rounded-full border-2 border-green-400 animate-spin opacity-50" style="animation-duration: 2s;"></div>
+                
+                <!-- Glowing background -->
+                <div class="absolute inset-6 bg-gradient-to-br from-blue-500 via-purple-500 to-green-500 rounded-full animate-pulse shadow-2xl"></div>
+                
+                <!-- Profile image with effects -->
+                <img 
+                    src="C:\Users\91994\Pictures\Saved Pictures\profil1.jpg"
+                    alt="VARSHINI CHANDRASHEKAR - Computer science graduate" 
+                    class="relative z-10 w-36 h-36 rounded-full object-cover border-4 border-white shadow-xl mx-auto mt-6 hover:scale-105 transition-all duration-500 hover:shadow-2xl"
+                    style="filter: brightness(1.1) contrast(1.1) saturate(1.1);"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                >
+                
+                <!-- Fallback emoji if image fails -->
+                <div class="relative z-10 w-36 h-36 rounded-full bg-white flex items-center justify-center text-6xl mx-auto mt-6 shadow-xl hover:scale-105 transition-all duration-500" style="display: none;">
+                    👨‍💻
+                </div>
+                
+                <!-- Floating particles -->
+                <div class="absolute top-4 left-4 w-2 h-2 bg-blue-400 rounded-full animate-bounce opacity-60" style="animation-delay: 0s;"></div>
+                <div class="absolute top-8 right-6 w-1.5 h-1.5 bg-purple-400 rounded-full animate-bounce opacity-70" style="animation-delay: 0.5s;"></div>
+                <div class="absolute bottom-6 left-8 w-2 h-2 bg-green-400 rounded-full animate-bounce opacity-80" style="animation-delay: 1s;"></div>
+                <div class="absolute bottom-4 right-4 w-1.5 h-1.5 bg-yellow-400 rounded-full animate-bounce opacity-60" style="animation-delay: 1.5s;"></div>
+            </div>
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">VARSHINI CHANDRASHEKAR</h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90">Computer science graduate</p>
+            <p class="text-lg mb-8 max-w-2xl mx-auto opacity-80">Passionate about building robust IT infrastructure and solving complex technical challenges with 8+ years of experience</p>
+            <div class="space-x-4">
+                <button onclick="scrollToSection('projects')" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">View My Work</button>
+                <button onclick="scrollToSection('contact')" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition duration-300">Get In Touch</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 dark-animated-bg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-blue-400 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold text-white mb-6">IT Professional & Problem Solver</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        With over 8 years of experience in IT systems administration, I specialize in designing and maintaining enterprise-level infrastructure. My expertise spans cloud computing, network security, and automation solutions.
+                    </p>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        I'm passionate about leveraging technology to streamline business operations and enhance productivity. I believe in continuous learning and staying updated with the latest industry trends and best practices.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="text-center p-4 dark-card-bg rounded-lg">
+                            <div class="text-3xl font-bold text-blue-400">8+</div>
+                            <div class="text-gray-300">Years Experience</div>
+                        </div>
+                        <div class="text-center p-4 dark-card-bg rounded-lg">
+                            <div class="text-3xl font-bold text-blue-400">50+</div>
+                            <div class="text-gray-300">Projects Completed</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="w-64 h-64 mx-auto mb-8 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center text-8xl text-white shadow-2xl">
+                        🖥️
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 max-w-md mx-auto">
+                        <div class="dark-card-bg p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-blue-400">8+</div>
+                            <div class="text-sm text-gray-300">Years Experience</div>
+                        </div>
+                        <div class="dark-card-bg p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-green-400">50+</div>
+                            <div class="text-sm text-gray-300">Projects Completed</div>
+                        </div>
+                        <div class="dark-card-bg p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-purple-400">99.9%</div>
+                            <div class="text-sm text-gray-300">Uptime Achieved</div>
+                        </div>
+                        <div class="dark-card-bg p-4 rounded-lg text-center">
+                            <div class="text-2xl font-bold text-yellow-400">24/7</div>
+                            <div class="text-sm text-gray-300">Support Ready</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 dark-animated-bg relative overflow-hidden">
+        <!-- Network Topology Background -->
+        <div class="absolute inset-0 opacity-5">
+            <svg class="w-full h-full" viewBox="0 0 1200 800">
+                <!-- Network topology lines -->
+                <g stroke="#60a5fa" stroke-width="1" fill="none">
+                    <path d="M100,100 L300,200 L500,150 L700,250 L900,200 L1100,300" class="network-connection"/>
+                    <path d="M200,300 L400,400 L600,350 L800,450 L1000,400" class="network-connection" style="animation-delay: 0.5s"/>
+                    <path d="M150,500 L350,600 L550,550 L750,650 L950,600" class="network-connection" style="animation-delay: 1s"/>
+                </g>
+                <!-- Network nodes -->
+                <g fill="#34d399">
+                    <circle cx="100" cy="100" r="4" class="network-node"/>
+                    <circle cx="300" cy="200" r="4" class="network-node" style="animation-delay: 0.2s"/>
+                    <circle cx="500" cy="150" r="4" class="network-node" style="animation-delay: 0.4s"/>
+                    <circle cx="700" cy="250" r="4" class="network-node" style="animation-delay: 0.6s"/>
+                    <circle cx="900" cy="200" r="4" class="network-node" style="animation-delay: 0.8s"/>
+                    <circle cx="1100" cy="300" r="4" class="network-node" style="animation-delay: 1s"/>
+                </g>
+            </svg>
+        </div>
+        
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Technical Skills</h2>
+                <div class="w-20 h-1 bg-blue-400 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold text-white mb-8">Core Technologies</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-200 font-medium">Windows Server Administration</span>
+                                <span class="text-gray-300">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3">
+                                <div class="skill-bar bg-blue-500 h-3 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-200 font-medium">Linux/Unix Systems</span>
+                                <span class="text-gray-300">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3">
+                                <div class="skill-bar bg-green-500 h-3 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-200 font-medium">Network Security</span>
+                                <span class="text-gray-300">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3">
+                                <div class="skill-bar bg-red-500 h-3 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="text-gray-200 font-medium">Cloud Platforms (AWS/Azure)</span>
+                                <span class="text-gray-300">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-3">
+                                <div class="skill-bar bg-purple-500 h-3 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-white mb-8">Certifications & Tools</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="dark-card-bg p-6 rounded-lg shadow-lg text-center card-hover cursor-pointer" onclick="openCertModal()">
+                            <div class="text-3xl mb-3">🏆</div>
+                            <h4 class="font-semibold text-white">CompTIA Security+</h4>
+                            <p class="text-sm text-gray-400 mt-2">Click to view certificate</p>
+                        </div>
+                        <div class="dark-card-bg p-6 rounded-lg shadow-lg text-center card-hover">
+                            <div class="text-3xl mb-3">☁️</div>
+                            <h4 class="font-semibold text-white">AWS Certified</h4>
+                        </div>
+                        <div class="dark-card-bg p-6 rounded-lg shadow-lg text-center card-hover">
+                            <div class="text-3xl mb-3">🔧</div>
+                            <h4 class="font-semibold text-white">VMware vSphere</h4>
+                        </div>
+                        <div class="dark-card-bg p-6 rounded-lg shadow-lg text-center card-hover">
+                            <div class="text-3xl mb-3">🐳</div>
+                            <h4 class="font-semibold text-white">Docker & K8s</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 dark-animated-bg relative overflow-hidden">
+        <!-- Data Center Visualization Background -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="w-full h-full flex justify-center items-center">
+                <div class="grid grid-cols-8 gap-2">
+                    <!-- Server rack visualization -->
+                    <div class="w-4 h-16 bg-blue-400 rounded-sm animate-pulse"></div>
+                    <div class="w-4 h-16 bg-green-400 rounded-sm animate-pulse" style="animation-delay: 0.2s"></div>
+                    <div class="w-4 h-16 bg-purple-400 rounded-sm animate-pulse" style="animation-delay: 0.4s"></div>
+                    <div class="w-4 h-16 bg-yellow-400 rounded-sm animate-pulse" style="animation-delay: 0.6s"></div>
+                    <div class="w-4 h-16 bg-red-400 rounded-sm animate-pulse" style="animation-delay: 0.8s"></div>
+                    <div class="w-4 h-16 bg-cyan-400 rounded-sm animate-pulse" style="animation-delay: 1s"></div>
+                    <div class="w-4 h-16 bg-orange-400 rounded-sm animate-pulse" style="animation-delay: 1.2s"></div>
+                    <div class="w-4 h-16 bg-pink-400 rounded-sm animate-pulse" style="animation-delay: 1.4s"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4">Featured Projects</h2>
+                <div class="w-20 h-1 bg-blue-400 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="dark-card-bg rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-6xl text-white">
+                        🏢
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-3">Enterprise Infrastructure Overhaul</h3>
+                        <p class="text-gray-300 mb-4">Migrated 500+ user environment to cloud-hybrid infrastructure, reducing costs by 40% and improving uptime to 99.9%.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30">AWS</span>
+                            <span class="px-3 py-1 bg-green-500/20 text-green-300 text-sm rounded-full border border-green-500/30">VMware</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-300 text-sm rounded-full border border-purple-500/30">PowerShell</span>
+                        </div>
+                        <button class="text-blue-400 font-semibold hover:text-blue-300 transition duration-300">Learn More →</button>
+                    </div>
+                </div>
+                <div class="dark-card-bg rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center text-6xl text-white">
+                        🔒
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-3">Security Automation Platform</h3>
+                        <p class="text-gray-300 mb-4">Developed automated security monitoring system that reduced incident response time by 75% and prevented 200+ security threats.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-red-500/20 text-red-300 text-sm rounded-full border border-red-500/30">SIEM</span>
+                            <span class="px-3 py-1 bg-yellow-500/20 text-yellow-300 text-sm rounded-full border border-yellow-500/30">Python</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30">Splunk</span>
+                        </div>
+                        <button class="text-blue-400 font-semibold hover:text-blue-300 transition duration-300">Learn More →</button>
+                    </div>
+                </div>
+                <div class="dark-card-bg rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center text-6xl text-white">
+                        📊
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-white mb-3">Network Monitoring Dashboard</h3>
+                        <p class="text-gray-300 mb-4">Built real-time network monitoring solution providing 360° visibility into network performance and health metrics.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-orange-500/20 text-orange-300 text-sm rounded-full border border-orange-500/30">Grafana</span>
+                            <span class="px-3 py-1 bg-green-500/20 text-green-300 text-sm rounded-full border border-green-500/30">SNMP</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 text-sm rounded-full border border-blue-500/30">Docker</span>
+                        </div>
+                        <button class="text-blue-400 font-semibold hover:text-blue-300 transition duration-300">Learn More →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+                <div class="w-20 h-1 bg-white mx-auto mb-6"></div>
+                <p class="text-xl opacity-90">Ready to discuss your next IT project? Let's connect!</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="text-2xl">📧</div>
+                            <div>
+                                <div class="font-semibold">Email</div>
+                                <div class="opacity-80">alex.chen@email.com</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="text-2xl">📱</div>
+                            <div>
+                                <div class="font-semibold">Phone</div>
+                                <div class="opacity-80">+1 (555) 123-4567</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="text-2xl">📍</div>
+                            <div>
+                                <div class="font-semibold">Location</div>
+                                <div class="opacity-80">San Francisco, CA</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="text-2xl">💼</div>
+                            <div>
+                                <div class="font-semibold">LinkedIn</div>
+                                <div class="opacity-80">linkedin.com/in/alexchen</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <form class="space-y-6" onsubmit="handleSubmit(event)">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Name</label>
+                            <input type="text" required class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-white/40" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Email</label>
+                            <input type="email" required class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-white/40" placeholder="your.email@example.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Message</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-white/40" placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-white text-blue-600 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Modal -->
+    <div id="certModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-2xl font-bold text-gray-800">CompTIA Security+ Certification</h3>
+                    <button onclick="closeCertModal()" class="text-gray-500 hover:text-gray-700 text-2xl">&times;</button>
+                </div>
+                
+                <!-- Certificate Image -->
+                <div class="mb-6 text-center">
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg border-2 border-blue-200">
+                        <!-- Certificate SVG -->
+                        <svg viewBox="0 0 400 300" class="w-full max-w-md mx-auto">
+                            <!-- Certificate Background -->
+                            <rect width="400" height="300" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2" rx="8"/>
+                            
+                            <!-- Header -->
+                            <rect width="400" height="60" fill="#1e40af" rx="8 8 0 0"/>
+                            <text x="200" y="35" text-anchor="middle" fill="white" font-size="18" font-weight="bold">CompTIA Security+</text>
+                            
+                            <!-- Certificate Body -->
+                            <text x="200" y="100" text-anchor="middle" fill="#374151" font-size="14">This certifies that</text>
+                            <text x="200" y="130" text-anchor="middle" fill="#1f2937" font-size="20" font-weight="bold">Alex Chen</text>
+                            <text x="200" y="160" text-anchor="middle" fill="#374151" font-size="12">has successfully completed the requirements for</text>
+                            <text x="200" y="180" text-anchor="middle" fill="#1e40af" font-size="16" font-weight="bold">CompTIA Security+ Certification</text>
+                            
+                            <!-- Certificate Details -->
+                            <text x="50" y="220" fill="#6b7280" font-size="10">Certificate ID: SEC-2024-AC-001</text>
+                            <text x="50" y="235" fill="#6b7280" font-size="10">Issue Date: March 15, 2024</text>
+                            <text x="50" y="250" fill="#6b7280" font-size="10">Valid Until: March 15, 2027</text>
+                            
+                            <!-- Seal -->
+                            <circle cx="320" cy="220" r="25" fill="#dc2626" opacity="0.1"/>
+                            <circle cx="320" cy="220" r="20" fill="none" stroke="#dc2626" stroke-width="2"/>
+                            <text x="320" y="225" text-anchor="middle" fill="#dc2626" font-size="8" font-weight="bold">CERTIFIED</text>
+                            
+                            <!-- Decorative elements -->
+                            <path d="M30 270 Q50 260 70 270" stroke="#e5e7eb" stroke-width="1" fill="none"/>
+                            <path d="M330 270 Q350 260 370 270" stroke="#e5e7eb" stroke-width="1" fill="none"/>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Certificate Details -->
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-3">Certification Details</h4>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li><strong>Certification:</strong> CompTIA Security+</li>
+                            <li><strong>Certificate ID:</strong> SEC-2024-AC-001</li>
+                            <li><strong>Issue Date:</strong> March 15, 2024</li>
+                            <li><strong>Expiration:</strong> March 15, 2027</li>
+                            <li><strong>Status:</strong> <span class="text-green-600 font-semibold">Active</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-3">Skills Covered</h4>
+                        <ul class="space-y-1 text-sm text-gray-600">
+                            <li>• Network Security</li>
+                            <li>• Risk Management</li>
+                            <li>• Cryptography</li>
+                            <li>• Identity Management</li>
+                            <li>• Incident Response</li>
+                            <li>• Security Architecture</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                    <p class="text-sm text-blue-800">
+                        <strong>About CompTIA Security+:</strong> This certification validates the baseline skills necessary to perform core security functions and pursue an IT security career. It covers essential security concepts, tools, and procedures.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 border-t border-gray-700">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p>&copy; 2024 Alex Chen. All rights reserved.</p>
+            <p class="text-gray-400 mt-2">Built with passion for technology and innovation</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling function
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            alert('Mobile menu would open here - this is a demo portfolio');
+        });
+
+        // Form submission handler
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your message! This is a demo form - in a real portfolio, this would send an email.');
+        }
+
+        // Modal functions
+        function openCertModal() {
+            document.getElementById('certModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCertModal() {
+            document.getElementById('certModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('certModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCertModal();
+            }
+        });
+
+        // Animate skill bars on scroll
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-bar');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.width = entry.target.style.width;
+                    }
+                });
+            });
+
+            skillBars.forEach(bar => observer.observe(bar));
+        }
+
+        // Network Animation
+        function createNetworkAnimation() {
+            const svg = document.getElementById('networkSvg');
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            
+            svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+            
+            // Create network nodes
+            const nodes = [];
+            const nodeCount = 15;
+            
+            for (let i = 0; i < nodeCount; i++) {
+                const node = {
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    vx: (Math.random() - 0.5) * 0.5,
+                    vy: (Math.random() - 0.5) * 0.5,
+                    id: i
+                };
+                nodes.push(node);
+                
+                // Create node element
+                const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                circle.setAttribute('cx', node.x);
+                circle.setAttribute('cy', node.y);
+                circle.setAttribute('r', Math.random() * 4 + 3);
+                const colors = ['#60a5fa', '#34d399', '#a78bfa', '#fbbf24', '#f87171'];
+                circle.setAttribute('fill', colors[Math.floor(Math.random() * colors.length)]);
+                circle.setAttribute('class', 'network-node');
+                circle.setAttribute('id', `node-${i}`);
+                svg.appendChild(circle);
+            }
+            
+            // Create connections
+            function updateConnections() {
+                // Remove existing connections
+                const existingConnections = svg.querySelectorAll('.network-connection');
+                existingConnections.forEach(conn => conn.remove());
+                
+                for (let i = 0; i < nodes.length; i++) {
+                    for (let j = i + 1; j < nodes.length; j++) {
+                        const dx = nodes[i].x - nodes[j].x;
+                        const dy = nodes[i].y - nodes[j].y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+                        
+                        if (distance < 200) {
+                            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                            line.setAttribute('x1', nodes[i].x);
+                            line.setAttribute('y1', nodes[i].y);
+                            line.setAttribute('x2', nodes[j].x);
+                            line.setAttribute('y2', nodes[j].y);
+                            const connectionColors = ['#60a5fa', '#34d399', '#a78bfa', '#fbbf24', '#f87171'];
+                            line.setAttribute('stroke', connectionColors[Math.floor(Math.random() * connectionColors.length)]);
+                            line.setAttribute('stroke-width', '1');
+                            line.setAttribute('opacity', Math.max(0.1, 1 - distance / 200));
+                            line.setAttribute('class', 'network-connection');
+                            svg.appendChild(line);
+                        }
+                    }
+                }
+            }
+            
+            // Animation loop
+            function animate() {
+                nodes.forEach((node, index) => {
+                    // Update position
+                    node.x += node.vx;
+                    node.y += node.vy;
+                    
+                    // Bounce off edges
+                    if (node.x <= 0 || node.x >= width) node.vx *= -1;
+                    if (node.y <= 0 || node.y >= height) node.vy *= -1;
+                    
+                    // Keep within bounds
+                    node.x = Math.max(0, Math.min(width, node.x));
+                    node.y = Math.max(0, Math.min(height, node.y));
+                    
+                    // Update node position
+                    const circle = document.getElementById(`node-${index}`);
+                    if (circle) {
+                        circle.setAttribute('cx', node.x);
+                        circle.setAttribute('cy', node.y);
+                    }
+                });
+                
+                updateConnections();
+                requestAnimationFrame(animate);
+            }
+            
+            updateConnections();
+            animate();
+        }
+
+
+
+        // Binary Rain Animation
+        function createBinaryRain() {
+            const binaryContainer = document.getElementById('binaryRain');
+            if (!binaryContainer) return;
+            
+            const columns = Math.floor(window.innerWidth / 20);
+            
+            for (let i = 0; i < columns; i++) {
+                const column = document.createElement('div');
+                column.style.position = 'absolute';
+                column.style.left = `${i * 20}px`;
+                column.style.top = '0';
+                column.style.width = '20px';
+                column.style.height = '100vh';
+                column.style.overflow = 'hidden';
+                column.style.fontSize = '14px';
+                column.style.fontFamily = 'monospace';
+                column.style.color = '#00ff00';
+                column.style.lineHeight = '20px';
+                
+                // Create binary digits
+                const binaryString = Array.from({length: 50}, () => Math.random() > 0.5 ? '1' : '0').join('');
+                column.textContent = binaryString;
+                column.classList.add('binary-rain');
+                column.style.animationDelay = `${Math.random() * 4}s`;
+                
+                binaryContainer.appendChild(column);
+            }
+        }
+        
+        // Enhanced Network Animation with Data Packets
+        function createAdvancedNetworkAnimation() {
+            const svg = document.getElementById('networkSvg');
+            if (!svg) return;
+            
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            
+            svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+            
+            // Create network nodes with data transmission
+            const nodes = [];
+            const nodeCount = 20;
+            
+            for (let i = 0; i < nodeCount; i++) {
+                const node = {
+                    x: Math.random() * width,
+                    y: Math.random() * height,
+                    vx: (Math.random() - 0.5) * 0.3,
+                    vy: (Math.random() - 0.5) * 0.3,
+                    id: i,
+                    dataLoad: Math.random() * 100
+                };
+                nodes.push(node);
+                
+                // Create node element with data indicator
+                const nodeGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+                nodeGroup.setAttribute('id', `node-group-${i}`);
+                
+                const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                circle.setAttribute('cx', node.x);
+                circle.setAttribute('cy', node.y);
+                circle.setAttribute('r', Math.random() * 3 + 2);
+                const colors = ['#60a5fa', '#34d399', '#a78bfa', '#fbbf24', '#f87171'];
+                circle.setAttribute('fill', colors[Math.floor(Math.random() * colors.length)]);
+                circle.setAttribute('class', 'network-node');
+                circle.setAttribute('id', `node-${i}`);
+                
+                // Add data transmission ring
+                const ring = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                ring.setAttribute('cx', node.x);
+                ring.setAttribute('cy', node.y);
+                ring.setAttribute('r', 8);
+                ring.setAttribute('fill', 'none');
+                ring.setAttribute('stroke', colors[Math.floor(Math.random() * colors.length)]);
+                ring.setAttribute('stroke-width', '1');
+                ring.setAttribute('opacity', '0.3');
+                ring.setAttribute('class', 'signal-wave');
+                ring.style.animationDelay = `${Math.random() * 2}s`;
+                
+                nodeGroup.appendChild(circle);
+                nodeGroup.appendChild(ring);
+                svg.appendChild(nodeGroup);
+            }
+            
+            // Create data packets
+            function createDataPacket(startNode, endNode) {
+                const packet = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+                packet.setAttribute('r', '2');
+                packet.setAttribute('fill', '#00ff00');
+                packet.setAttribute('opacity', '0.8');
+                
+                const animateMotion = document.createElementNS('http://www.w3.org/2000/svg', 'animateMotion');
+                animateMotion.setAttribute('dur', '2s');
+                animateMotion.setAttribute('repeatCount', 'indefinite');
+                animateMotion.setAttribute('path', `M${startNode.x},${startNode.y} L${endNode.x},${endNode.y}`);
+                
+                packet.appendChild(animateMotion);
+                svg.appendChild(packet);
+                
+                // Remove packet after animation
+                setTimeout(() => {
+                    if (packet.parentNode) {
+                        packet.parentNode.removeChild(packet);
+                    }
+                }, 2000);
+            }
+            
+            // Create connections with data flow
+            function updateConnections() {
+                // Remove existing connections
+                const existingConnections = svg.querySelectorAll('.network-connection');
+                existingConnections.forEach(conn => conn.remove());
+                
+                for (let i = 0; i < nodes.length; i++) {
+                    for (let j = i + 1; j < nodes.length; j++) {
+                        const dx = nodes[i].x - nodes[j].x;
+                        const dy = nodes[i].y - nodes[j].y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+                        
+                        if (distance < 150) {
+                            const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                            line.setAttribute('x1', nodes[i].x);
+                            line.setAttribute('y1', nodes[i].y);
+                            line.setAttribute('x2', nodes[j].x);
+                            line.setAttribute('y2', nodes[j].y);
+                            const connectionColors = ['#60a5fa', '#34d399', '#a78bfa', '#fbbf24', '#f87171'];
+                            line.setAttribute('stroke', connectionColors[Math.floor(Math.random() * connectionColors.length)]);
+                            line.setAttribute('stroke-width', '1');
+                            line.setAttribute('opacity', Math.max(0.1, 1 - distance / 150));
+                            line.setAttribute('class', 'network-connection');
+                            svg.appendChild(line);
+                            
+                            // Occasionally create data packets
+                            if (Math.random() < 0.1) {
+                                createDataPacket(nodes[i], nodes[j]);
+                            }
+                        }
+                    }
+                }
+            }
+            
+            // Animation loop
+            function animate() {
+                nodes.forEach((node, index) => {
+                    // Update position
+                    node.x += node.vx;
+                    node.y += node.vy;
+                    
+                    // Bounce off edges
+                    if (node.x <= 0 || node.x >= width) node.vx *= -1;
+                    if (node.y <= 0 || node.y >= height) node.vy *= -1;
+                    
+                    // Keep within bounds
+                    node.x = Math.max(0, Math.min(width, node.x));
+                    node.y = Math.max(0, Math.min(height, node.y));
+                    
+                    // Update node position
+                    const nodeGroup = document.getElementById(`node-group-${index}`);
+                    if (nodeGroup) {
+                        const circle = nodeGroup.querySelector('circle');
+                        const ring = nodeGroup.querySelectorAll('circle')[1];
+                        if (circle) {
+                            circle.setAttribute('cx', node.x);
+                            circle.setAttribute('cy', node.y);
+                        }
+                        if (ring) {
+                            ring.setAttribute('cx', node.x);
+                            ring.setAttribute('cy', node.y);
+                        }
+                    }
+                });
+                
+                updateConnections();
+                requestAnimationFrame(animate);
+            }
+            
+            updateConnections();
+            animate();
+        }
+
+        // Initialize animations when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            animateSkillBars();
+            createBinaryRain();
+            createAdvancedNetworkAnimation();
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9734d462f3db415e',t:'MTc1NTg5MTQ5Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
